@@ -4,9 +4,17 @@
 #' to specify using the Reed College Senior Thesis LaTeX template and cls files.
 #'
 #' @export
-#' @param toc A Boolean (TRUE or FALSE) specifying whether table of contents should be created
+#' @param template Path of the Pandoc LaTeX template file. Defaults to
+#'   \code{"template.tex"}.
+#' @param toc A Boolean (TRUE or FALSE) specifying whether table of contents
+#'   should be created
 #' @param toc_depth A positive integer
-#' @param highlight Syntax highlighting style. Supported styles include "default", "tango", "pygments", "kate", "monochrome", "espresso", "zenburn", and "haddock". Pass NULL to prevent syntax highlighting.
+#' @param highlight Syntax highlighting style. Supported styles include
+#'   "default", "tango", "pygments", "kate", "monochrome", "espresso",
+#'   "zenburn", and "haddock". Pass NULL to prevent syntax highlighting.
+#' @param pandoc_args optional values for the pandoc_args argument of
+#'   bookdown::pdf_book. The argument \code{"--top-level-division=chapter"} is
+#'   always included in the pandoc_args.
 #' @param ... other arguments to bookdown::pdf_book
 #' @return A modified \code{pdf_document} based on the Reed Senior Thesis LaTeX
 #'   template
@@ -15,14 +23,17 @@
 #' \dontrun{
 #'  output: huskydown::thesis_pdf
 #' }
-thesis_pdf <- function(toc = TRUE, toc_depth = 3, highlight = "default", ...){
+thesis_pdf <- function(
+  template = "template.tex", toc = TRUE, toc_depth = 3,
+  highlight = "default",  pandoc_args = NULL, ...){
 
-  base <- pdf_book(template = "template.tex",
+  base <- pdf_book(
+    template = template,
     toc = toc,
     toc_depth = toc_depth,
     highlight = highlight,
     keep_tex = TRUE,
-    pandoc_args = "--chapters",
+    pandoc_args = c(pandoc_args, "--top-level-division=chapter"),
     ...)
 
   # Mostly copied from knitr::render_sweave
