@@ -10,5 +10,5 @@ dplyr
 ggplot2
 bookdown
 knitr
-git2r
 huskydown
+bindrcpp

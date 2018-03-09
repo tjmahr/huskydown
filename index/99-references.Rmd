@@ -1,5 +1,7 @@
 <!--
-The bib chunk below must go last in this document according to how R Markdown renders.  More info is at http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
+The bib chunk below must go last in this document according to how 
+R Markdown renders. More info is at
+http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
 -->
 
 \backmatter
@@ -20,7 +22,8 @@ To remove the indentation of the first entry.
 \noindent
 
 <!--
-To create a hanging indent and spacing between entries.  These three lines may need to be removed for styles that don't require the hanging indent.
+To create a hanging indent and spacing between entries. These three lines may
+need to be removed for styles that don't require the hanging indent.
 -->
 
 \setlength{\parindent}{-0.20in}
@@ -29,7 +32,9 @@ To create a hanging indent and spacing between entries.  These three lines may n
 
 
 <!--
-This is just for testing with more citations for the bibliography at the end.  Add other entries into the list here if you'd like them to appear in the bibliography even if they weren't explicitly cited in the document.
+This is just for testing with more citations for the bibliography at the end.
+Add other entries into the list here if you'd like them to appear in the
+bibliography even if they weren't explicitly cited in the document.
 -->
 
 ---
