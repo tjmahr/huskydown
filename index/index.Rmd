@@ -13,7 +13,10 @@ acknowledgments: |
 dedication: |
   "My dedication"
 school: "University of Washington"
+# Uncomment to add a watermark to the pdf pages.
+# watermark: "DRAFT"
 # End of UW thesis fields
+
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 

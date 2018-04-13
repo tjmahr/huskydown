@@ -13,6 +13,7 @@ acknowledgments: |
 dedication: |
   "My dedication"
 school: "University of Washington"
+watermark: DRAFT
 # End of UW thesis fields
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site

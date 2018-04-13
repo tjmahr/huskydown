@@ -18,10 +18,16 @@
 % ----- change 'stamp' to 'nostamp'
 %------ to omit watermark
 %
-\usepackage[nostamp]{draftwatermark}
+
+$if(watermark)$
+\usepackage[stamp]{draftwatermark}
 % % Use the following to make modification
-\SetWatermarkText{DRAFT}
+\SetWatermarkText{$watermark$}
 \SetWatermarkLightness{0.95}
+$else$
+\usepackage[nostamp]{draftwatermark}
+$endif$
+
 
 %% for the per mil symbol
 \usepackage[nointegrals]{wasysym}
